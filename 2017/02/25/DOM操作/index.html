@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://ranchoddas.me">
   <title>DOM操作——怎样添加、移除、移动、复制、创建和查找节点。 | ranchoddas的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###（1）创建新节点 createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 ###（2）添加、移除、替换、插入 appendChild()  removeChild()  replaceChild()  insertBefore() ###（3）查">
+  <meta name="description" content="（1）创建新节点createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 （2）添加、移除、替换、插入appendChild()  removeChild()  replaceChild()  insertBefore() （3）查找getElement">
 <meta name="keywords" content="JavaScript,DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DOM操作——怎样添加、移除、移动、复制、创建和查找节点。">
 <meta property="og:url" content="http://ranchoddas.me/2017/02/25/DOM操作/index.html">
 <meta property="og:site_name" content="ranchoddas的博客">
-<meta property="og:description" content="###（1）创建新节点 createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 ###（2）添加、移除、替换、插入 appendChild()  removeChild()  replaceChild()  insertBefore() ###（3）查">
-<meta property="og:updated_time" content="2017-12-19T04:11:10.048Z">
+<meta property="og:description" content="（1）创建新节点createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 （2）添加、移除、替换、插入appendChild()  removeChild()  replaceChild()  insertBefore() （3）查找getElement">
+<meta property="og:updated_time" content="2017-12-19T04:13:52.036Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM操作——怎样添加、移除、移动、复制、创建和查找节点。">
-<meta name="twitter:description" content="###（1）创建新节点 createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 ###（2）添加、移除、替换、插入 appendChild()  removeChild()  replaceChild()  insertBefore() ###（3）查">
+<meta name="twitter:description" content="（1）创建新节点createDocumentFragment()    //创建一个DOM片段  createElement()   //创建一个具体的元素  createTextNode()   //创建一个文本节点 （2）添加、移除、替换、插入appendChild()  removeChild()  replaceChild()  insertBefore() （3）查找getElement">
   
     <link rel="alternative" href="/atom.xml" title="ranchoddas的博客" type="application/atom+xml">
   
@@ -172,22 +172,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###（1）创建新节点</p>
-<pre><code>createDocumentFragment()    //创建一个DOM片段
+        <h3 id="（1）创建新节点"><a href="#（1）创建新节点" class="headerlink" title="（1）创建新节点"></a>（1）创建新节点</h3><pre><code>createDocumentFragment()    //创建一个DOM片段
 
 createElement()   //创建一个具体的元素
 
 createTextNode()   //创建一个文本节点
-</code></pre><p>###（2）添加、移除、替换、插入</p>
-<pre><code>appendChild()
+</code></pre><h3 id="（2）添加、移除、替换、插入"><a href="#（2）添加、移除、替换、插入" class="headerlink" title="（2）添加、移除、替换、插入"></a>（2）添加、移除、替换、插入</h3><pre><code>appendChild()
 
 removeChild()
 
 replaceChild()
 
 insertBefore()
-</code></pre><p>###（3）查找</p>
-<pre><code>getElementsByTagName()    //通过标签名称
+</code></pre><h3 id="（3）查找"><a href="#（3）查找" class="headerlink" title="（3）查找"></a>（3）查找</h3><pre><code>getElementsByTagName()    //通过标签名称
 
 getElementsByName()    //通过元素的Name属性的值
 
@@ -336,7 +333,7 @@ getElementById()    //通过元素Id，唯一性
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建元素节点"><span class="toc-number">1.</span> <span class="toc-text"><a href="#1-&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="1.&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>1.&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-添加元素节点"><span class="toc-number">2.</span> <span class="toc-text"><a href="#2-&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="2.&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>2.&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-移除元素节点"><span class="toc-number">3.</span> <span class="toc-text"><a href="#3-&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="3.&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>3.&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-替换元素节点"><span class="toc-number">4.</span> <span class="toc-text"><a href="#4-&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="4.&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>4.&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-复制节点"><span class="toc-number">5.</span> <span class="toc-text"><a href="#5-&#x590D;&#x5236;&#x8282;&#x70B9;" class="headerlink" title="5.&#x590D;&#x5236;&#x8282;&#x70B9;"></a>5.&#x590D;&#x5236;&#x8282;&#x70B9;</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#（1）创建新节点"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#xFF08;1&#xFF09;&#x521B;&#x5EFA;&#x65B0;&#x8282;&#x70B9;" class="headerlink" title="&#xFF08;1&#xFF09;&#x521B;&#x5EFA;&#x65B0;&#x8282;&#x70B9;"></a>&#xFF08;1&#xFF09;&#x521B;&#x5EFA;&#x65B0;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#（2）添加、移除、替换、插入"><span class="toc-number">2.</span> <span class="toc-text"><a href="#&#xFF08;2&#xFF09;&#x6DFB;&#x52A0;&#x3001;&#x79FB;&#x9664;&#x3001;&#x66FF;&#x6362;&#x3001;&#x63D2;&#x5165;" class="headerlink" title="&#xFF08;2&#xFF09;&#x6DFB;&#x52A0;&#x3001;&#x79FB;&#x9664;&#x3001;&#x66FF;&#x6362;&#x3001;&#x63D2;&#x5165;"></a>&#xFF08;2&#xFF09;&#x6DFB;&#x52A0;&#x3001;&#x79FB;&#x9664;&#x3001;&#x66FF;&#x6362;&#x3001;&#x63D2;&#x5165;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#（3）查找"><span class="toc-number">3.</span> <span class="toc-text"><a href="#&#xFF08;3&#xFF09;&#x67E5;&#x627E;" class="headerlink" title="&#xFF08;3&#xFF09;&#x67E5;&#x627E;"></a>&#xFF08;3&#xFF09;&#x67E5;&#x627E;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建元素节点"><span class="toc-number">3.1.</span> <span class="toc-text"><a href="#1-&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="1.&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>1.&#x521B;&#x5EFA;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-添加元素节点"><span class="toc-number">3.2.</span> <span class="toc-text"><a href="#2-&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="2.&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>2.&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-移除元素节点"><span class="toc-number">3.3.</span> <span class="toc-text"><a href="#3-&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="3.&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>3.&#x79FB;&#x9664;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-替换元素节点"><span class="toc-number">3.4.</span> <span class="toc-text"><a href="#4-&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;" class="headerlink" title="4.&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;"></a>4.&#x66FF;&#x6362;&#x5143;&#x7D20;&#x8282;&#x70B9;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-复制节点"><span class="toc-number">3.5.</span> <span class="toc-text"><a href="#5-&#x590D;&#x5236;&#x8282;&#x70B9;" class="headerlink" title="5.&#x590D;&#x5236;&#x8282;&#x70B9;"></a>5.&#x590D;&#x5236;&#x8282;&#x70B9;</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
