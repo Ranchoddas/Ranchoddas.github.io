@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>事件流 | ranchoddas的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、理解事件流2、使用事件处理程序3、不同的事件类型  一、事件流事件流描述的是从页面中接受事件的顺序。IE的事件流是事件冒泡流，而Netscape的事件流是事件捕获流1、事件冒泡事件冒泡，即事件最开始由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上转播至最不具体的节点(文档)。2、事件捕获事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点最后接收到事件。">
+<meta name="keywords" content="JavaScript,event">
+<meta property="og:type" content="article">
+<meta property="og:title" content="事件流">
+<meta property="og:url" content="http://ranchoddas.me/2017/02/10/事件流/index.html">
+<meta property="og:site_name" content="ranchoddas的博客">
+<meta property="og:description" content="1、理解事件流2、使用事件处理程序3、不同的事件类型  一、事件流事件流描述的是从页面中接受事件的顺序。IE的事件流是事件冒泡流，而Netscape的事件流是事件捕获流1、事件冒泡事件冒泡，即事件最开始由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上转播至最不具体的节点(文档)。2、事件捕获事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点最后接收到事件。">
+<meta property="og:updated_time" content="2017-02-10T06:05:34.150Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="事件流">
+<meta name="twitter:description" content="1、理解事件流2、使用事件处理程序3、不同的事件类型  一、事件流事件流描述的是从页面中接受事件的顺序。IE的事件流是事件冒泡流，而Netscape的事件流是事件捕获流1、事件冒泡事件冒泡，即事件最开始由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上转播至最不具体的节点(文档)。2、事件捕获事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点最后接收到事件。">
+  
+    <link rel="alternate" href="/atom.xml" title="ranchoddas的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ranchoddas的博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ranchoddas.me"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-事件流" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/10/事件流/" class="article-date">
+  <time datetime="2017-02-10T05:45:05.000Z" itemprop="datePublished">2017-02-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      事件流
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>1、理解事件流<br>2、使用事件处理程序<br>3、不同的事件类型</p>
+</blockquote>
+<h2 id="一、事件流"><a href="#一、事件流" class="headerlink" title="一、事件流"></a>一、事件流</h2><p>事件流描述的是从页面中接受事件的顺序。<br>IE的事件流是事件冒泡流，而Netscape的事件流是事件捕获流<br><strong>1、事件冒泡</strong><br>事件冒泡，即事件最开始由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上转播至最不具体的节点(文档)。<br><strong>2、事件捕获</strong><br>事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点最后接收到事件。<br><a id="more"></a></p>
+<h2 id="二、事件处理程序"><a href="#二、事件处理程序" class="headerlink" title="二、事件处理程序"></a>二、事件处理程序</h2><p>1、HTML事件处理程序<br>2、DOM0级事件处理程序<br>3、DOM2级事件处理程序<br>DOM2级事件定义了两个方法：用于处理指定和删除事件处理程序的操作：addEventListener()和removeEventListener()。它们都接收三个参数：要处理的事件名、作为事件处理程序的函数和一个布尔值。<br>4、IE事件处理程序<br>attachEvent()添加事件<br>detachEvent()删除事件<br>这两个方法接收相同的两个参数：事件处理程序名称与事件处理函数<br>5、跨浏览器的事件处理程序</p>
+<h2 id="三、事件对象"><a href="#三、事件对象" class="headerlink" title="三、事件对象"></a>三、事件对象</h2><p>事件对象event<br><strong>1、DOM中的事件对象</strong><br>(1)、type:获取事件类型<br>(2)、target：事件目标<br>(3)、stopPropagation() 阻止事件冒泡<br>(4)、preventDefault() 阻止事件的默认行为<br><strong>2、IE中的事件对象</strong><br>(1)、type:获取事件类型<br>(2)、srcElement：事件目标<br>(3)、cancelBubble=true阻止事件冒泡<br>(4)、returnValue=false阻止事件的默认行为</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ranchoddas.me/2017/02/10/事件流/" data-id="cjbd032bn001h00uwhxs6upa9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/10/小脚本/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          小脚本
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/07/莫娘强大回归？/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">莫娘强大回归？</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM/">DOM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM2/">DOM2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/domain-name/">domain name</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/event/">event</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/封装函数/">封装函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/活动/">活动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/英剧/">英剧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/DOM2/" style="font-size: 10px;">DOM2</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/domain-name/" style="font-size: 10px;">domain name</a> <a href="/tags/event/" style="font-size: 10px;">event</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/封装函数/" style="font-size: 13.33px;">封装函数</a> <a href="/tags/活动/" style="font-size: 10px;">活动</a> <a href="/tags/算法/" style="font-size: 16.67px;">算法</a> <a href="/tags/英剧/" style="font-size: 10px;">英剧</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/15/运动框架/">运动框架</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/14/获取样式/">获取样式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/06/Sum-All-Numbers-in-a-Range/">Sum All Numbers in a Range</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/03/git-commit文本设定为当前时间/">git commit文本设定为当前时间</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/25/DOM操作/">DOM操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 ranchoddas<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
